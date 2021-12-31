@@ -1,8 +1,8 @@
-﻿namespace SelectionSort
+﻿namespace Algorithms
 {
     using System;
 
-    class Program
+    class SelectionSort
     {
         static int findSmallest(int[] array, int n)
         {
@@ -25,27 +25,21 @@
             b = c;
         }
 
-        static int[] SelSort(int[] array, int currentIndex = 0)
+        static int[] SelSort(int[] array, int smallestIndex = 0)
         {
-            if (currentIndex == array.Length)
+            if (smallestIndex == array.Length)
             {
                 return array;
             }
 
-            var index = findSmallest(array, currentIndex);
+            var index = findSmallest(array, smallestIndex);
 
-            if (index != currentIndex)
+            if (index != smallestIndex)
             {
-                Swap(ref array[index], ref array[currentIndex]);
+                Swap(ref array[index], ref array[smallestIndex]);
             }
 
-            return SelSort(array, currentIndex + 1);
-        }
-
-        static void Main(string[] args)
-        {
-            int[] array = { 2, 3, 4, 6, 8, 10, 2, 0, 1, 1 };
-            Console.WriteLine(string.Join(", ", SelSort(array)));
+            return SelSort(array, smallestIndex + 1);
         }
     }
 }
