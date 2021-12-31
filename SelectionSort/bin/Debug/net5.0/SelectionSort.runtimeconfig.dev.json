@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\nastik\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\nastik\\.nuget\\packages"
+    ]
+  }
+}
