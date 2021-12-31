@@ -58,3 +58,5 @@ if (index != smallestIndex)
 
 return SelSort(array, smallestIndex + 1);
 ```
+
+## Recursion
