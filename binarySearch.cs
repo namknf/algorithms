@@ -24,7 +24,7 @@ namespace Algorithms
                 }
             }
 
-            return -1;
+            return null;
         }
     }
 
