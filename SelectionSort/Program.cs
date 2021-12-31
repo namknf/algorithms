@@ -7,7 +7,6 @@
         static int findSmallest(int[] array, int n)
         {
             int result = n;
-
             for (var i = n; i < array.Length; ++i)
             {
                 if (array[i] < array[result])
