@@ -1,0 +1,3 @@
+# ALGORITHMS
+---
+##Bynary Search
