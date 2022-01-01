@@ -19,6 +19,19 @@ if (searchVar == mid)
     return mid;
 }
 ```
+For testing:
+```c#
+static void Main()
+{
+    Alg test = new Alg();
+
+    int[] array = new int[] { 2, 4, 6, 8, 10, 12 };
+    int searchRes = 6;
+    int result = test.BinarySearch(array, searchRes, 0, array.Length - 1);
+
+    Console.WriteLine($"Result is: {result}");
+}
+```
 
 ## Selection Sort
 
@@ -58,6 +71,14 @@ if (index != smallestIndex)
 
 return SelSort(array, smallestIndex + 1);
 ```
+For testing:
+```c#
+private static void Main()
+{
+    SlectionSort test = new SelectionSort();
+    int[] result = test.SelSort({1, 5, 2, 7, 3}); // 1, 2, 3, 5, 7
+}
+```
 
 ## Recursion
 ### A recursive function is a construct in which the function calls itself.
@@ -90,4 +111,17 @@ else
 }
 
 return result;
+```
+
+For testing:
+```c#
+private static void Main()
+{
+    AlgFactroial test = new AlgFactroial();
+
+    int resultFac = test.Factorial(8);
+    int resultCom = test.Combinations(6, 4);
+
+    Console.WriteLine($"Factorial = {resultFac}, Combinations = {resultCom}");
+}
 ```
