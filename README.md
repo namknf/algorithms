@@ -60,4 +60,34 @@ return SelSort(array, smallestIndex + 1);
 ```
 
 ## Recursion
-A recursive function is a construct in which the function calls itself.
+### A recursive function is a construct in which the function calls itself.
+According to the classics, I started with the implementation of the method for finding the factorial of a number:
+```c#
+public int Factorial(int x)
+{
+    if (x == 1)
+    {
+        return 1;
+    }
+
+    return x * Factorial(x - 1);
+}
+```
+
+Further implemented a method for finding combinations of two numbers:
+```c#
+if ((m == 0) && (n > 0) || (m == n) && (n > 0))
+{
+    result = 1;
+}
+else if ((m > n) && (n >= 0))
+{
+    result = 0;
+}
+else
+{
+    result = Combinations(n - 1, m - 1) + Combinations(n - 1, m);
+}
+
+return result;
+```
