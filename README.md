@@ -58,3 +58,6 @@ if (index != smallestIndex)
 
 return SelSort(array, smallestIndex + 1);
 ```
+
+## Recursion
+A recursive function is a construct in which the function calls itself.
