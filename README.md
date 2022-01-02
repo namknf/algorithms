@@ -125,3 +125,5 @@ private static void Main()
     Console.WriteLine($"Factorial = {resultFac}, Combinations = {resultCom}");
 }
 ```
+
+## Quick Sort
