@@ -2,7 +2,7 @@
 
 ## **Bynary Search**
 
-As an input, the algorithm accepts a sorted array of numbers and a number for search in class Alg. The output is the index of this number in the array.
+### As an input, the algorithm accepts a sorted array of numbers and a number for search in class Alg. The output is the index of this number in the array.
 There is only one method BynarySearch. The input parameters of the method are an array, the values of the boundaries of the list in which to search and a number to search.
 
 **until that part shrinks to one element ... check the middle element**
@@ -29,7 +29,7 @@ static void Main()
     int searchRes = 6;
     int result = test.BinarySearch(array, searchRes, 0, array.Length - 1);
 
-    Console.WriteLine($"Result is: {result}");
+    // Console.WriteLine($"Result is: {result}");
 }
 ```
 
@@ -122,8 +122,21 @@ private static void Main()
     int resultFac = test.Factorial(8);
     int resultCom = test.Combinations(6, 4);
 
-    Console.WriteLine($"Factorial = {resultFac}, Combinations = {resultCom}");
+    // Console.WriteLine($"Factorial = {resultFac}, Combinations = {resultCom}");
 }
 ```
 
 ## Quick Sort
+### QuickSort is a Divide and Conquer algorithm. It picks an element as pivot and partitions the given array around the picked pivot. Method Sort looks like:
+```c#
+if (low <= high)
+{
+    return array;
+}
+
+int pivotInd = Indexing(array, low, high);
+Sort(array, low, pivotInd - 1);
+Sort(array, pivotInd + 1, high);
+
+return array;
+```

@@ -27,18 +27,4 @@ namespace Algorithms
             return 0;
         }
     }
-
-    class Program
-    {
-        static void Main()
-        {
-            Alg test = new Alg();
-
-            int[] array = new int[] { 2, 4, 6, 8, 10, 12 };
-
-            int searchRes = 6;
-
-            test.BinarySearch(array, searchRes, 0, array.Length - 1);
-        }
-    }
 }
