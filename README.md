@@ -143,3 +143,20 @@ return array;
 ## Breadth-First Search
 ### Breadth-first search (BFS) is an algorithm for searching a tree data structure for a node that satisfies a given property. It starts at the tree root and explores all nodes at the present depth prior to moving on to the nodes at the next depth level. Extra memory, usually a queue, is needed to keep track of the child nodes that were encountered but not yet explored.
 To make the algorithm not so difficult to perceive, I made characters from the series "The Witcher" as nodes of the graph. There are classes WitcherCharacter, BreadthFirstSearch (it inherits from the class WitcherCharacter) and class Program for clarity.
+
+## Dijkstra's Algorithm
+### One algorithm for finding the shortest path from a starting node to a target node in a weighted graph is Dijkstra’s algorithm. The algorithm creates a tree of shortest paths from the starting vertex, the source, to all other points in the graph.
+The main method of finding the shortest path is in the class Dijkstra.
+```c#
+private string GetPath(GraphVertex startVertex, GraphVertex endVertex)
+{
+    var path = endVertex.ToString();
+    while (startVertex != endVertex)
+    {
+        endVertex = GetVertexInfo(endVertex).PreviousVertex;
+        path = endVertex.ToString() + path;
+    }
+
+    return path;
+}
+```
