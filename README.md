@@ -160,3 +160,6 @@ private string GetPath(GraphVertex startVertex, GraphVertex endVertex)
     return path;
 }
 ```
+
+## SieveOfEratosthenes
+### The sieve of Eratosthenes is one of the most efficient ways to find all primes smaller than n when n is smaller than 10 million or so. When the algorithm terminates, all the numbers in the list that are not marked are prime. The algorithm is implemented on the example Cashpoint.
