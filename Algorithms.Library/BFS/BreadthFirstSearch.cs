@@ -1,11 +1,11 @@
-namespace Algorithms
+﻿namespace Algorithms.Library.BFS
 {
     using System;
     using System.Collections.Generic;
 
-    internal class BreadthFirstAlgorithm : WitcherCharacter
+    public class BreadthFirstSearch : WitcherCharacter
     {
-        public BreadthFirstAlgorithm(string name)
+        public BreadthFirstSearch(string name)
             : base(name)
         {
         }

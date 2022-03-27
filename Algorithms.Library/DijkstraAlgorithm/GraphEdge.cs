@@ -1,4 +1,4 @@
-namespace Algorithms
+﻿namespace Algorithms.Library.DijkstraAlgorithm
 {
     internal class GraphEdge
     {

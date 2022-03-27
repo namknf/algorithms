@@ -1,10 +1,10 @@
-namespace Algorithms
+﻿namespace Algorithms.Library.DijkstraAlgorithm
 {
     using System.Collections.Generic;
 
     internal class Dijkstra
     {
-        private Graph _graph;
+        private readonly Graph _graph;
 
         private List<GraphVertexInformation> _infos;
 
@@ -99,14 +99,15 @@ namespace Algorithms
             }
         }
 
-        // Path formation 
+        // Path formation
         private string GetPath(GraphVertex startVertex, GraphVertex endVertex)
         {
             var path = endVertex.ToString();
+
             while (startVertex != endVertex)
             {
                 endVertex = GetVertexInfo(endVertex).PreviousVertex;
-                path = endVertex.ToString() + path;
+                path = endVertex + path;
             }
 
             return path;

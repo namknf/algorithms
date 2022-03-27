@@ -1,8 +1,8 @@
-namespace Algorithms
+﻿namespace Algorithms.Library.BFS
 {
     using System.Collections.Generic;
 
-    internal class WitcherCharacter
+    public class WitcherCharacter
     {
         private readonly List<WitcherCharacter> _charactersList = new List<WitcherCharacter>();
 

@@ -1,4 +1,4 @@
-namespace Algorithms
+﻿namespace Algorithms.Library.DijkstraAlgorithm
 {
     using System.Collections.Generic;
 
@@ -33,6 +33,7 @@ namespace Algorithms
         {
             var v1 = FindVertex(firstName);
             var v2 = FindVertex(secondName);
+
             if (v2 != null && v1 != null)
             {
                 v1.AddEdge(v2, weight);

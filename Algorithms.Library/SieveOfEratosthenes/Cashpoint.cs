@@ -1,4 +1,4 @@
-﻿namespace Algorithms
+﻿namespace Algorithms.Library.SieveOfEratosthenes
 {
     using System;
     using System.Collections.Generic;
@@ -7,19 +7,17 @@
 
     public sealed class Cashpoint
     {
-        private readonly Dictionary<uint, uint> _banknotes = new ();
+        private readonly Dictionary<uint, uint> _banknotes = new();
         private uint[] _granted = { 1 };
-        private uint _count;
-        private uint _total;
         private CalculateGrants _calcGrants;
 
-        public uint Total => _total;
+        public uint Total { get; private set; }
 
-        public uint Count => _count;
+        public uint Count { get; private set; }
 
         public bool CanGrant(uint sum)
         {
-            return sum <= _total && (_granted[sum] > 0);
+            return sum <= Total && (_granted[sum] > 0);
         }
 
         public void AddBanknote(uint banknote)
@@ -41,8 +39,8 @@
             _calcGrants = SieveForAdd;
             _calcGrants(banknote, count);
 
-            _total += banknote * count;
-            _count += count;
+            Total += banknote * count;
+            Count += count;
         }
 
         public void RemoveBanknote(uint banknote)
@@ -66,8 +64,8 @@
                     _calcGrants = SieveForRemove;
                     _calcGrants(banknote, count);
 
-                    _total -= banknote * count;
-                    _count -= count;
+                    Total -= banknote * count;
+                    Count -= count;
                 }
             }
         }
@@ -76,7 +74,7 @@
         {
             for (var j = 1; j <= count; j++)
             {
-                uint[] grantedG = new uint[_total + (banknote * j) + 1];
+                uint[] grantedG = new uint[Total + (banknote * j) + 1];
 
                 Array.Resize(ref _granted, grantedG.Length);
                 Array.Copy(_granted, grantedG, _granted.Length);

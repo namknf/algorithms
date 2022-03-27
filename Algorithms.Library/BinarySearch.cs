@@ -1,10 +1,8 @@
-namespace Algorithms
+﻿namespace Algorithms.Library
 {
-    using System;
-
-    internal class Alg
+    internal class BinarySearch
     {
-        public int BinarySearch(int[] array, int searchVar, int low, int high)
+        public int BinSearch(int[] array, int searchVar, int low, int high)
         {
             while (low <= high)
             {

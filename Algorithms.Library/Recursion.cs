@@ -1,8 +1,6 @@
-namespace Algorithms
+﻿namespace Algorithms.Library
 {
-    using System;
-
-    internal class AlgFactroial
+    internal class Recursion
     {
         public int Factorial(int x)
         {
@@ -18,7 +16,7 @@ namespace Algorithms
         {
             int result = 0;
 
-            if ((m == 0) && (n > 0) || (m == n) && (n > 0))
+            if (((m == 0) && n > 0) || ((m == n) && (n > 0)))
             {
                 result = 1;
             }
@@ -30,6 +28,7 @@ namespace Algorithms
             {
                 result = Combinations(n - 1, m - 1) + Combinations(n - 1, m);
             }
+
             return result;
         }
     }
